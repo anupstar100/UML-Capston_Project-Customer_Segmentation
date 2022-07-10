@@ -70,4 +70,21 @@ By diagnosing our data frame, we got the following:
   5. Standard Deviation: 156.28
 
 ### *3. Country v/s % of Customers*
-![image](https://user-images.githubusercontent.com/98649231/178128063-04583ae7-756f-41cb-8bc7-8b8d23cee381.png)
+![image](https://user-images.githubusercontent.com/98649231/178128101-7dc0b958-35d3-4343-8308-5f1cab8bf61d.png)
+  1. Most of the customers are from UK.
+  2. Followed by Germany and France.
+  3. After France, the % tends to zero.
+
+### *4. Country v/s % of total sales*
+![image](https://user-images.githubusercontent.com/98649231/178128156-7f79259e-197f-4c5f-99b2-d56c76263462.png)
+  1. Most of the sales are from UK.
+  2. Followed by Netherlands, EIRE, Germany, France and Australia.
+  3. After Australia, the sales % tends to zero.
+
+## ***RFM Analysis***
+RFM is a data modeling method used to analyze customer value It stands for Recency, Frequency and Monetary, which are just three metrics that describe what your customers did.
+  * Recency (R) of a customer - Days since the last purchase
+  * Frequency (F)     of the bookings/turnover of a customer - Number of purchases, e g in 6 months
+  * Monetary (M) - The total turnover of a customer Sum of sales, e g in 6 months
+
+For the analysis, we need to define a ‘analysis date’, which is the day on which we are conducting this analysis which I am taking as the next to last date in data and taking 1 year previous data from the selected date for recency calculation.
