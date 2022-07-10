@@ -13,16 +13,60 @@ A key consideration for a company would be whether or not to segment its custome
 
 Once the company has identified its customer base and the number of segments it aims to focus upon, it needs to decide the factors on whose basis it will decide to segment its customers.
 
-*Factors for segmentation for a business to business marketing company:*
+**Factors for segmentation for a business to business marketing company:**
   1. Industry
   2. Number of employees
   3. Location
   4. Market cap/Company size
   5. Age of the company
   
-*Factors for segmentation for a business to consumer marketing company:*
+**Factors for segmentation for a business to consumer marketing company:**
   1. Demographic: Age, Gender, Education, Ethnicity, Income, Employment, hobbies, etc.
   2. Recency, Frequency, and Monetary: Time period of the last transaction, the frequency with which the customer transacts, and the total monetary value of trade.
   3. Behavioral: Previous purchasing behavior, brand preferences, life events, etc.
   4. Psychographic: Beliefs, personality, lifestyle, personal interest, motivation, priorities, etc.
   5. Geographical: Country, zip code, climatic conditions, urban/rural areal differentiation, accessibility to markets, etc.
+    
+## ***Reason for Customer Segmentation***
+Customer segmentation has a lot of potential benefits. It helps a company to develop an effective strategy for targeting its customers. This has a direct impact on the entire product development cycle, the budget management practices, and the plan for delivering targeted promotional content to customers. For example, a company can make a high-end product, a budget product, or a cheap alternative product, depending upon whether the product is intended for its most high yield customers, frequent purchasers or for the low-value customer segment. It may also fine-tune the features of the product for fulfilling the specific needs of its customers.
+
+Customer segmentation can also help a company to understand how its customers are alike, what is important to them, and what is not. Often such information can be used to develop personalized relevant content for different customer bases. Many studies have found that customers appreciate such individual attention and are more likely to respond and buy the product. They also come to respect the brand and feel connected with it. This is likely to give the company a big advantage over its competitors. In a world where everyone has hundreds of emails, push notifications, messages, and ads dropping into their content stream, no one has time for irrelevant content.
+
+Finally, this technique can also be used by companies to test the pricing of their different products, improve customer service, and upsell and cross-sell other products or services.
+
+## ***Data Attributes***
+* *InvoiceNo:* Invoice number. Nominal, a 6-digit integral number uniquely assigned to each transaction. If this code starts with letter 'c', it indicates a cancellation.
+* *StockCode:* Product (item) code. Nominal, a 5-digit integral number uniquely assigned to each distinct product.
+* *Description:* Product (item) name. Nominal.
+* *Quantity:* The quantities of each product (item) per transaction. Numeric.
+* *InvoiceDate:* Invoice Date and time. Numeric, the day and time when each transaction was generated.
+* *UnitPrice:* Unit price. Numeric, Product price per unit in sterling.
+* *CustomerID:* Customer number. Nominal, a 5-digit integral number uniquely assigned to each customer.
+* *Country:* Country name. Nominal, the name of the country where each customer resides.
+
+## ***Diagnosing the DataFrame***
+By diagnosing our data frame, we got the following:
+  1. There are 8 features with 5,41,909 rows of data.
+  2. There are 5 categorical columns and 3 numerical columns.
+  3.Columns ‘Quantity’ is of *‘int64’* data type.
+  4. Columns 'InvoiceNo', 'StockCode', 'InvoiceDate' and 'Country' are of *object* data type
+  5. Columns 'UnitPrice' and 'CustomerID' are of *float64* data type
+
+## ***Exploratory Data Analysis***
+### *1. Unit Price Column*
+  1. Minimum UnitPrice:                                     - 11062.06
+  2. Maximum UnitPrice:                                     13541.33
+  3. Mean:                                                  3.862
+  4. Median:                                                2.08
+  5. Standard deviation:                                    41.964
+  6. % of data where UnitPrice is zero:                     0.48%
+  7. Number of unique customers with unit price as zero:    31
+
+### *2. Quantity Column*
+  1. Minimum Quantity: 1
+  2. Maximum Quantity: 80995
+  3. Mean: 10.617
+  4. Median: 4
+  5. Standard Deviation: 156.28
+
+### *3. Country v/s % of Customers*
