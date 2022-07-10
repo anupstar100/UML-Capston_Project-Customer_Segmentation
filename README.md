@@ -70,3 +70,4 @@ By diagnosing our data frame, we got the following:
   5. Standard Deviation: 156.28
 
 ### *3. Country v/s % of Customers*
+![image](https://user-images.githubusercontent.com/98649231/178128063-04583ae7-756f-41cb-8bc7-8b8d23cee381.png)
