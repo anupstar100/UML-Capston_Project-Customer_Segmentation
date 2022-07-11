@@ -88,3 +88,32 @@ RFM is a data modeling method used to analyze customer value It stands for Recen
   * Monetary (M) - The total turnover of a customer Sum of sales, e g in 6 months
 
 For the analysis, we need to define a ‘analysis date’, which is the day on which we are conducting this analysis which I am taking as the next to last date in data and taking 1 year previous data from the selected date for recency calculation.
+
+  1. RFM Analysis Date: 2011-12-11 17:19:00
+  2. Start date when taking 1 year data for analysis: 2010-12-11 17:19:00
+  
+Then we calculate the R, F, M and RFM scores. The values of R, F, M scores lies between 0 and 3 whereas the values of RFM score lies between 0 and 9
+
+*RFM score = R score + F score + M score*
+
+Then we grouped the Recency, Frequency and Monetary values by RFM scores and calculate their mean.
+### *Findings:*
+  * As expected, customers with the lowest RFM scores have the highest recency value and the lowest frequency and monetary value, and the vice-versa is true as well. This can be used to create manual segments based on RFM scores like Loyal Customers Group where Frequancy is High, High Spending Group where Monetary is High, Lost Customers Group where Recency is High etc.
+  * Loyal and Good Customers which have High RFM values could be rewarded and heavy discounts are not needed for them. Customers with High Recency (and High Frequency and Monetary values) could be targeted aggresively with discounts so that they are not lost.
+  
+## ***Modelling***
+  1. First of all, I checked the distribution of RFM values. They are positively skewed. So, I transformed them using logerithmic transformation.
+  2. Then I used elbow method to find the optimum number of clusters. And the optimum number of cluster is 3.
+  3. We grouped by the clusters and calculated the mean values of RFM values.
+  * It should be noted that the F and M values of cluster 2 (3rd cluster) is very high. So they are high value customers.
+  4. And finally we applied our modelling - K Means Cluster and divided our customers into three parts.
+  
+![image](https://user-images.githubusercontent.com/98649231/178171989-cde954f4-f607-45d8-8805-c03d94a5a394.png)
+
+## ***Conclusion***
+This plot clearly indicates that green cluster is high value customer cohort (Cluster 1 and blue cluster is Lost/low value customer cohort (Cluster 2 while red cluster is average value customer cohort (Cluster 0
+* **High Value:** Frequent spending customers with high monetary transactions and had transacted recently
+* **Low Value/ Lost:** Customers with least frequency and monetary spending and made purchase long time ago These customers might be lost from the customer base
+* **Average Value:** Customers who made their transactions some time ago with less frequency and monetary value These customers could become high risk and we could aggressively market towards them with great deals so we don't lose them forever
+
+------------------------------------------------------------------------
